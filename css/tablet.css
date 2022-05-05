@@ -1,0 +1,66 @@
+@media (min-width: 930px) {
+
+
+
+       /*
+    -->           EXCHANGE CONTAINER         <--
+    =============================================
+                                               */
+
+
+            .main-currency-table {
+                flex-shrink: 1;
+            }
+
+                    .main-currency-table__right-arrow,
+                    .main-currency-table__left-arrow {
+                        display: none;
+                    }
+
+
+
+
+
+
+
+
+    /*
+    -->             PRODUCT DETAIL           <--
+    =============================================
+                                               */ 
+
+        .product-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* width: 930px; */
+            margin: 0 auto;
+        }
+
+
+
+        /*
+    -->               MAIN PLANS              <--
+    =============================================
+                                               */
+
+
+
+
+            .plans-container__slider {
+                /* padding: 0 12%; */
+                gap: 40px;
+                justify-content: center;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+}

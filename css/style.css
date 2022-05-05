@@ -1,0 +1,620 @@
+/*  --------------------------------------------------
+                MUCHISX'S CSS RESET
+ -------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 6.25%;
+}
+
+body {
+    font-size: 16rem;
+    font-family: "DM sans";
+}
+
+/*  --------------------------------------------------
+                MAIN CSS BELOW
+ -------------------------------------------------- */
+
+
+ /*=============================================
+ -->             Root Variables              <--
+ =============================================*/
+
+
+:root {
+
+    /* ---------- COLORS ---------- */
+
+    --linear-bg: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --warm-black-plus-1: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFFFFF;
+
+    /* ---------- TEXT ---------- */
+    
+    --h1-mobile:  700 24rem/26rem "DM Sans";
+    --h2-mobile:  500 14rem/18rem "DM Sans";
+
+    /* ---------- EFFECTS ---------- */
+    
+    --shadow-white: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    --shadow-black: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    
+}
+
+
+ /*=============================================
+ -->                 HEADER                  <--
+ =============================================*/
+
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    text-align: center;
+    background: var(--linear-bg);
+}
+
+    header img {
+        width: 150px;
+        height: 24px;
+        margin-top: 60px;
+    }
+
+    .header__title-container {
+        width: 90%;
+        min-width: 288px;
+        max-width: 900px;
+        height: 218px;
+        margin: 40px 0 0 0;
+        text-align: center;
+    }
+
+        .header__title-container h1 {
+            color: var(--just-white);
+            font: var(--h1-mobile);
+        }
+
+        .header__title-container p {
+            margin: 25px 0 0 0;
+            font: var(--h2-mobile);
+            color: var(--soft-orange);
+        }
+
+            .header__title-container .header__button {
+                position: absolute;
+                /* left: calc(50% - 118px); */
+                top: 270px;
+                right: 0;
+                left: 0;
+                display: block;
+                margin: 35px auto 0;
+                padding: 16px;
+                width: 229px;
+                height: 48px;
+                background-color: var(--off-white);
+                box-shadow: var(--shadow-white);
+                border: none;
+                border-radius: 4px;
+                font: var(--h2-mobile);
+                font-weight: 700;
+                text-decoration: none;
+                color: var(--warm-black);
+            }
+
+                .header__button span {
+                    display: inline-block;
+                    width: 12px;
+                    height: 8px;
+                    margin-left: 14px;
+                    background-image: url('../assets/icons/down-arrow.svg');
+                    filter: brightness(0) saturate(100%) invert(6%) sepia(8%) saturate(856%) hue-rotate(349deg) brightness(99%) contrast(87%);
+                }
+
+
+ /*=============================================
+ -->                  MAIN                  <--
+ =============================================*/
+
+
+main {
+ width: 100%;
+ height: auto;
+ background-color: var(--off-white);
+ min-width: 320px;
+}
+
+
+     
+    /*
+    -->           EXCHANGE CONTAINER         <--
+    =============================================
+                                               */
+
+
+    .main-exchange-container {
+        width: 100%;
+        height: auto;
+        padding: 80px 0 64px 0;
+        text-align: center;
+        min-width: 320px;
+    }
+
+        .main-exchange-container .backgroundImg {
+            width: 195px;
+            height: 195px;
+            margin: 0 auto 50px;
+            background: url('../assets/img/Bitcoin.png') center/cover no-repeat;
+        }
+
+        .main-exchange-container__title {
+            width: 90%;
+            min-width: 288px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+            .main-exchange-container__title h2 {
+                margin: 0 0 30px;
+                font: var(--h1-mobile);
+                color: var(--warm-black);
+            }
+
+            .main-exchange-container__title p {
+                margin: 0 0 30px;
+                font: var(--h2-mobile);
+                color: #757575;
+            }
+
+
+
+        .main-tables-container {
+            display: flex;
+            overflow: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: x proximity;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .main-tables-container::-webkit-scrollbar {
+            display: none;
+        }
+
+            .main-currency-table {
+                scroll-snap-align: center;
+                width: 100%;
+                min-width: 320px;
+                /* max-width: 500px; */
+                flex-grow: 1;
+                flex-shrink: 0;
+                height: 360px;
+                margin: 0 auto;
+            }
+
+                .main-currency-table .currency-table__title {
+                    margin: 0 0 15px;
+                    font-size: 18rem;
+                    font-weight: 700;
+                    line-height: 24rem;
+                    color: var(--bitcoin-orange);   
+                    text-align: center;
+                }
+
+                .main-currency-table .blue-text {
+                    color: var(--secondary-blue);
+                }
+
+                .currency-table__container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    font-family: "Inter";
+                    width: 90%;
+                    min-width: 230px;
+                    /* max-width: 300px; */
+                    height: 250px;
+                    margin: 0 auto 16px;
+                }
+
+                    .currency-table__container table {
+                        width: 80%;
+                        height: 100%;
+                        max-width: 320px;
+                        border-radius: 15px;
+                        overflow: hidden;
+                    }
+
+                        .currency-table__container tr {
+                            
+                        }
+
+                            .currency-table__container td {
+                                width: 50%;
+                                font-size: 16rem;
+                                font-weight: 500;
+                                line-height: 19rem;
+                                color: var(--grey);
+                                background-color: var(--just-white);
+                                text-align: left;
+                                padding: 0 0 0 12px;
+                            }
+
+                            .currency-table__container .table__right {
+                                font-size: 14rem;
+                                font-weight: 400;
+                                line-height: 16rem;
+                                text-align: center;
+                                color: #757575;
+                                padding: 0;
+                            }
+
+                                .currency-table__container .down {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    margin: 0 0 0 10px;
+                                    vertical-align: bottom;
+                                    background: url('../assets/icons/trending-down.svg') center/cover no-repeat;
+                                }
+
+                                .currency-table__container .up {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    margin: 0 0 0 10px;
+                                    vertical-align: bottom;
+                                    background: url('../assets/icons/trending-up.svg') center/cover no-repeat;
+                                }
+
+                        
+                        .main-currency-table__right-arrow {
+                            left: 96%;
+                            position: absolute;
+                        }
+                        
+                        .main-currency-table__left-arrow {
+                            right: 96%;
+                            position: absolute;
+                            transform: rotate(180deg);
+                        }
+
+
+                        .currency-table__date p {
+                            margin: 0 auto;
+                            width: 80%;
+                            max-width: 320px;
+                            background-color: var(--soft-orange);
+                            border-radius: 8px;
+                            padding: 8px;
+                            font-weight: 300;
+                        }
+
+                        .blue-background p {
+                            background-color: var(--soft-blue);
+                        }
+    
+
+    /*
+    -->             PRODUCT DETAIL           <--
+    =============================================
+                                               */                        
+                        
+
+    .main-product-detail {
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        padding: 20px 16px 33px;
+        background-color: var(--warm-black) ;
+        color: var(--just-white);
+    }
+
+        .product-detail__batata-logo {
+            position: absolute;
+            width: 40px;
+            height: 25px;
+            top: -12.5px;
+            left: calc(50% - 20px);
+            background: url('../assets/icons/potato-chip.svg') center/cover no-repeat;
+
+        }
+
+        .product-detail__title {
+            width: 90%;
+            min-width: 288px;
+            height: auto;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+            .product-detail__title h2 {
+                margin-bottom: 20px;
+                font: var(--h1-mobile);
+                
+            }
+
+            .product-detail__title p {
+                margin-bottom: 20px;
+                font: var(--h2-mobile);
+                color: #808080;
+            }
+
+        .product-cards-container {
+            
+        }
+
+            .product-detail__card {
+                width: 90%;
+                min-width: 288px;
+                max-width: 400px;
+                height: 152px;
+                margin: 15px auto;
+                padding: 16px 16px 22px;
+                background-color: var(--warm-black-plus-1);
+                border-radius: 4px;
+                box-shadow: var(--shadow-black);
+            }
+
+                .product-detail__card .clock,
+                .product-detail__card .eye,
+                .product-detail__card .dollar,
+                .product-detail__card .check {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .clock {
+                    background: url('../assets/icons/clock.svg') center/cover no-repeat;
+                }
+
+                .eye {
+                    background: url('../assets/icons/eye.svg') center/cover no-repeat;
+                }
+
+                .dollar {
+                    background: url('../assets/icons/dollar-sign.svg') center/cover no-repeat;
+                }
+
+                .check {
+                    background: url('../assets/icons/check-circle.svg') center/cover no-repeat;
+                }
+
+                .product__card-title {
+                    font-size: 18rem;
+                    font-weight: 700;
+                    line-height: 18rem;
+                    margin-bottom: 10px;
+                }
+
+                .product__card-body {
+                    font: var(--h2-mobile);
+                    color: #808080;
+                }
+
+                
+    /*
+    -->          BITCOIN IMG CONTAINER        <--
+    =============================================
+                                               */
+
+
+    .bitcoin-img-container {
+        width: 100%;
+        min-width: 320px;
+        height: 60vh;
+        background: url('../assets/img/bitcoinbaby2x.jpg') center/cover no-repeat;
+    }
+
+        .bitcoin-img-container h2 {
+            padding-top: 64px;
+            font: var(--h1-mobile);
+            color: var(--just-white);
+            text-align: center;
+        }
+
+
+    /*
+    -->               MAIN PLANS              <--
+    =============================================
+                                               */
+    
+
+
+    .main-plans-container {
+        width: 100%;
+        min-width: 320px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+        .plans__title {
+            width: 90%;
+            min-width: 288px;
+            height: auto;
+            margin: 0 auto 42px;
+            
+        }
+
+            .plans__title h2 {
+                padding: 50px 0 0;
+                font: var(--h1-mobile);
+                color: var(--warm-black);
+            }
+
+            .plans__title p {
+                padding: 30px 0 0;
+                font: var(--h2-mobile);
+                color: #757575;
+            }
+
+            .plans-container__slider {
+                padding: 0 25%;
+                display: flex;
+                gap: 10px;
+                height: 316px;
+                overflow-x: scroll;
+                overscroll-behavior-x: contain;
+                scroll-snap-type: x proximity;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+
+                .plans-container__slider::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .plans-container__card {
+                    scroll-snap-align: center;
+                    position: relative;
+                    width: 60%;
+                    min-width: 190px;
+                    max-width: 300px;
+                    height: 250px;
+                    margin: 50px auto 0;
+                    padding: 0 16px;
+                    background-color: var(--just-white);
+                    border-radius: 8px;
+                    box-shadow: var(--shadow-white);
+                    font-family: 'Inter';
+                }
+
+                    .recommended {
+                        position: absolute;
+                        width: 120px;
+                        height: 32px;
+                        top: -16px;
+                        left: calc(50% - 60px);
+                        background-color: var(--bitcoin-orange);
+                        border-radius: 8px;
+                        color: var(--just-white);
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 14px;
+                        padding: 8px;
+                        font-style: normal;
+                        /* text-align: center; */
+                    }
+
+                        .plan-info-container {
+
+                        }
+
+                            .plan-card__title {
+                                padding-top: 32px;
+                                font: var(--h2-mobile);
+                                color: black;
+                                margin-bottom: 8px;
+                            }
+
+                            .plan-card__price {
+                                max-width: 160px;
+                                margin: 0 auto;
+                                font-size: 52rem;
+                                font-weight: 700;
+                                line-height: 62rem;
+                                color: black;
+                                position: relative;
+                                margin-bottom: 8px;
+                            }
+
+                                .plan-card__price sup {
+                                    position: absolute;
+                                    left: 36px;
+                                    top: 12px;
+                                    font-size: 12rem;
+                                    line-height: 14px;
+                                    font-weight: 500;
+                                    color: #363636;
+                                }
+
+                            .plan-card__saving {
+                                font-size: 12rem;
+                                font-weight: 500;
+                                line-height: 14px;
+                                color: #757575;
+                            }
+
+                            .plan-card__ca {
+                                width: 152px;
+                                height: 48px;
+                                margin-top: 20px;
+                                border-radius: 4px;
+                                border: 2px solid var(--bitcoin-orange);
+                                background-color: var(--off-white);
+                                font-size: 14rem;
+                                line-height: 18rem;
+                                font-weight: 700;
+                                font-family: "DM Sans";
+                                outline: none;
+                                cursor: pointer;
+                            }
+
+                                .plan-card__ca span {
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    background: url('../assets/icons/orange-right-arrow.svg') center/cover no-repeat;
+                                    vertical-align: text-bottom;
+                        
+                                }
+
+
+ /*=============================================
+ -->                  MAIN                  <--
+ =============================================*/
+
+
+ footer {
+     display: flex;
+     width: 100%;
+     min-width: 320px;
+     height: 150px;
+     background-color: var(--bitcoin-orange);
+ }
+
+    footer section {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer__left * {
+        font: var(--h2-mobile);
+        list-style: none;
+        text-decoration: none;
+        color: var(--just-white);
+    }
+    
+        .footer__left li {
+            margin: 8px 0;
+        }
+
+                                            
+   
+
+
